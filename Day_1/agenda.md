@@ -37,6 +37,7 @@ npm -v
     nvm alias default 12
     </pre>
 
+Note: If you need specific version of npm use this. <pre>npm install -g npm@7.24.2</pre>
 ### React & relatives
 - React comes for FREE with node JS installation
 - create-react-app is a node pacakge that helps you create a React App (Best Practices)
@@ -52,9 +53,22 @@ npm install semantic-ui-css
 <pre> npm install axios --save </pre> 
 
 When developer uses,  --save flag while installing a package that is needed for the project, it is saved in the package.json and any other developers working on the project then have access to the same environments.
-### Hello Samer project
+
+
+
+## Hello Samer project (*Innovative and never been done before*)
 Install create-react-app and npx (if not present)
 <pre> npx create-react-app hello-samer </pre>
+Answer the configurations questions asked by the create-react-app (if any)
+
+Go through the structure of the generated project. 
+
+To Run the project, move to the hello-samer folder and 
+
+<pre>npm start<pre>
+
+By default the browser will open and at port 3000 you will see your beautiful dashboard. The port configuration by default is part of package.json usually.
+
 ### Visual Studio & relatives 
 - ESLint
 - Prettier
