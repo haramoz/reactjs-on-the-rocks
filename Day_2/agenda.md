@@ -10,6 +10,8 @@ function Welcome(props) {
   return <h1>Hello, {props.name}!</h1>;
 }
 ```
+
+
 ### JSX -> HTML
 JSX code is transpiled into regular JavaScript code using a tool like Babel. 
 
@@ -53,6 +55,14 @@ class Button extends React.Component {
 ## Component props and state management.
 - props are data that are passed down from a parent component to a child component. They are immutable, which means they cannot be changed by the child component. props are used to customize a component and pass data between components in a React.js application.
 
+```jsx
+//From LandingPage.js which has access to user.name variable
+
+import {Welcome} from ../Welcome.js 
+
+<Welcome name={user.name}>
+```
+
 - state, on the other hand, is data that is managed by a component and can be changed by the component itself. state is used to keep track of information that changes over time, such as form input, user authentication status, or component visibility.
 
 ```jsx
@@ -62,8 +72,8 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
-  }
-
+  } 
+  
   increment() {
     this.setState({ count: this.state.count + 1 });
   }
@@ -89,6 +99,7 @@ function ChildComponent(props) {
 
 ... for making HTTP requests in React.js applications
 
+Do not mix in a project both Fetch and Axios, they are alternative to each other. (Best Practise)
 
 ```jsx
 
