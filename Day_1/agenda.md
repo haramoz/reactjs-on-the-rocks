@@ -65,7 +65,7 @@ Go through the structure of the generated project.
 
 To Run the project, move to the hello-samer folder and 
 
-<pre>npm start<pre>
+<pre>npm start</pre>
 
 By default the browser will open and at port 3000 you will see your beautiful dashboard. The port configuration by default is part of package.json usually.
 
