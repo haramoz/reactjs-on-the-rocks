@@ -6,7 +6,9 @@ components have a lifecycle that describes the various stages a component goes t
 
 - Mounting: In this stage, the component is inserted into the DOM and rendered for the first time. This stage includes several lifecycle methods:
 
-    - componentWillMount(): This method is called just before the component is mounted. It is recommended to avoid using this method and use componentDidMount() instead.
+    - componentWillMount(): This method is called just before the component is mounted. It is recommended to avoid using this method and use componentDidMount() instead (Best Practices).
+
+      Misleading name: The name componentWillMount() suggests that the method is called right before the component is mounted to the DOM. In reality, this method is called during the rendering phase and not right before the actual DOM mounting. This discrepancy has led to confusion and incorrect usage among developers.
 
     - render(): This method is called to generate the HTML that is rendered to the screen.
 
@@ -27,10 +29,42 @@ components have a lifecycle that describes the various stages a component goes t
 - Unmounting: This stage is triggered when a component is removed from the DOM. This stage includes one lifecycle method:
 
     - componentWillUnmount(): This method is called just before the component is unmounted. It is used to perform any necessary cleanup, such as removing event 
+
+    import React, { Component } from 'react';
+  Example of ComponentWillUnmount:    
+  ```jsx
+  class Timer extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        time: 0,
+      };
+    }
+
+    componentDidMount() {
+      this.timerID = setInterval(() => {
+        this.setState({ time: this.state.time + 1 });
+      }, 1000);
+    }
+
+    componentWillUnmount() {
+      // Clean up the interval when the component is unmounted
+      clearInterval(this.timerID);
+    }
+
+    render() {
+      return (
+        <div>
+          <h1>Elapsed Time: {this.state.time} seconds</h1>
+        </div>
+      );
+    }
+  }
+  ```
 ### State management & Lifecycle methods
 The lifecycle methods are used to manage the state of a component at different stages of its existence. 
 
-- Initialization: componentDidMount() or getDerivedStateFromProps() ... constructor method
+- Initialization & Mounting: componentDidMount() or getDerivedStateFromProps() ... constructor method
 
 - Updating: shouldComponentUpdate() ... to determine whether the component should re-render
 
@@ -88,6 +122,7 @@ function Counter() {
 
   function handleClick() {
     setCount(count + 1);
+
   }
 
   return (
@@ -120,4 +155,6 @@ function Counter() {
 ```
 
 Assignment: 
-useEffect and useCallback function own implementation for consuming the get/post method
+- useEffect and useCallback function own implementation for consuming the get/post method
+- read about virtual DOM definition and 
+- async + await for axios api call.
