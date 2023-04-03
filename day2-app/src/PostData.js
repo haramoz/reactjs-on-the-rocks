@@ -4,29 +4,28 @@ import React, { useState, useEffect } from 'react';
 function PostData() {
 
   const [success, setSuccess] = useState(false);
-    var dataToPost = {
+    
+    useEffect(() => {
+    axios.post("https://jsonplaceholder.typicode.com/posts", {
       title: "Post request",
-      body:  "This is a message to post",
-    };
-
-    //useEffect
-    async axios.post("https://jsonplaceholder.typicode.com/posts", dataToPost)
-    await  
+      body:  "This is a message to post"}
+    )  
     .then((response) => {
         console.log(response.data);
-        setData2(true);
+        setSuccess(true);
       })
       .catch((error) => {
         console.log(error);
-        setData2(false);
+        setSuccess(false);
       });
+    }, []);
 
-      return (
+    return (
         <div>
-          <h2>Post was successful ? : Success</h2> //print success here
+          <h2>Post was successful ? : {success.toString()}</h2> 
         </div>
-      );
+        );
   }
 
 
-export default PostData
+export default PostData;
