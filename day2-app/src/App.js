@@ -1,17 +1,14 @@
 import './App.css';
-import PostData from './PostData';
+//import PostData from './PostData';
+import PostDataCallback from './PostDataCallback';
 
 function App() {
-
-  const buttonHandlePost = () => {
-    PostData();
-  }
 
   return (
     <div className="App">
       <header className="App-header">
         <h2> Hello </h2>
-        <button onClick={buttonHandlePost}>Post Data</button>
+        <PostDataCallback/>
       </header>
     </div>
   );
