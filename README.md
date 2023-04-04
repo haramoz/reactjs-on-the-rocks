@@ -33,7 +33,7 @@ Modules to Cover:
   - Event handling in React.
   - onClick, onChange, and onSubmit.
   
-- Day 5: Conditional Rendering and Lists
+- Day 5: Conditional Rendering, Lists & Router
 
   - Conditional rendering using ternary operators and logical &&.
   - How to render lists and the importance of the key prop.
