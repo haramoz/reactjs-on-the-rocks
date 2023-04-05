@@ -38,6 +38,7 @@ Modules to Cover:
   - Conditional rendering using ternary operators and logical &&.
   - How to render lists and the importance of the key prop.
   - How to map over arrays and render list items in React.
+  - Navigation 
   
 - Day 6: Component Composition and Styling
 
