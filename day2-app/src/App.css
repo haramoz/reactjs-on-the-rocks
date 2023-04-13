@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
@@ -35,4 +35,99 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav a, button {
+  text-decoration: none;
+  padding: 10px 20px;
+  color: #333;
+  font-size: 18px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+nav a:first-child {
+  margin-right: 10px;
+}
+
+nav a:hover, button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #FFEEB4;
+}
+
+.Metrics-page {
+  background-color: #B4E4B4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.Metrics-page p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.counter button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.counter button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+label {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 2px gray;
+}
+
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
 }

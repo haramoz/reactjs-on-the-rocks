@@ -13,7 +13,7 @@ function Counter() {
   }
 
   return (
-    <div>
+    <div className="counter">
       <p>You clicked {count} times</p>
       <button onClick={handleClick}>Click me</button>
     </div>
